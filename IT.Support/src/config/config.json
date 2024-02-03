@@ -1,0 +1,36 @@
+{
+    "GraphScopes":{
+        "ChatReadWrite":"Chat.ReadWrite",
+        "DirectoryReadAll":"Directory.Read.All",
+        "FilesRead":"Files.Read",
+        "AuditLogReadAll":"AuditLog.Read.All",
+        "OrganizationReadAll":"Organization.Read.All"
+    },
+    "GraphScopeGroups":{
+        "SendTeamsChatMessage":["Chat.ReadWrite","Directory.Read.All"]
+    },
+    "ADFilters":{
+        "Filters":["NoLogon30Days","NoLogon45Days","NoLogon60Days","NoLogon90Days","LockedOut","ActiveUsers","PasswordExpired","PasswordExpiring1Day","PasswordExpiring3Days"]
+    },
+    "PrivateVariables":{
+        "SMTPServer":"us-smtp-outbound-1.mimecast.com",
+        "UserOU":"OU=IT,DC=IT,DC=LOCAL",
+        "DisabledUserOU":"OU=Disabled Users,DC=IT,DC=LOCAL",
+        "SyncedDisabledUserOU":"OU=Disabled Users - Shared Mailboxes,OU=Disabled Users,DC=IT,DC=LOCAL",
+        "ComputerOU":"OU=Computers,OU=IT,DC=IT,DC=LOCAL",
+        "RequiredModules":["ActiveDirectory","ExchangeOnlineManagement","Microsoft.Online.SharePoint.PowerShell","Microsoft.Graph"],
+        "Domain":"IT.LOCAL",
+        "ServiceAccountOU":["OU=AWS","OU=O365","OU=Other","OU=Service Accounts","OU=Service Accounts - Excluded from Okta","OU=Test","OU=Helpdesk Accounts","OU=Special Teams Users"]
+    },
+    "LoggingVariables":{
+        "DefaultLoggingLevel":"Information",
+        "DefaultLoggingMode":"Database",
+        "DatabaseName":"DevOps_ITSupport_PS",
+        "ServerInstance":"BLDRSQL05",
+        "TableName":"ActivityLog",
+        "SchemaName":"dbo"
+    },
+    "PublicVariables":{
+
+    }
+}
